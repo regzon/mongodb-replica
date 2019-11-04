@@ -12,16 +12,14 @@ persistent storage implemented in flask and mongodb.
 The application uses flask for basic web requests serving
 and flask-socketio as a live sockets manager.
 
-Sources were adopted from [this article][app-source].
-[app-source]: https://codeburst.io/building-your-first-chat-application-using-flask-in-7-minutes-f98de4adfa5d
+Sources were adopted from [this article](https://codeburst.io/building-your-first-chat-application-using-flask-in-7-minutes-f98de4adfa5d).
 
 ### MongoDB
 
 MongoDB is represented as three nodes combined together
 in a replica set. The first one is the primary one.
 
-Configuration was taken from [this post][mongo-source].
-[mongo-source]: https://37yonub.ru/articles/mongo-replica-set-docker-localhost
+Configuration was taken from [this post](https://37yonub.ru/articles/mongo-replica-set-docker-localhost).
 
 ## Deploy
 
@@ -68,8 +66,7 @@ Image links:
 ### Swarm Deploy
 
 For this step you should configure a stack (create a swarm).
-[You can read more about it here][swarm-guide].
-[swarm-guide]: https://docs.docker.com/engine/swarm/swarm-mode/
+[You can read more about it here](https://docs.docker.com/engine/swarm/swarm-mode/).
 
 Now, containers can be deployed with the following command:
 
