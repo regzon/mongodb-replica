@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chat App</title>
+</head>
+<body>
+  <h3 id="noMessageHeader">No message yet..</h3>
+  <div class="message_holder"></div>
+
+  <form action="" method="POST">
+    <input type="text" class="username" placeholder="Username"/>
+    <input type="text" class="message" placeholder="Messages"/>
+    <input type="submit"/>
+  </form>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+
+  <script type="text/javascript">
+    var initialized = false;
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    function addMessage(data) {
+      if (data.username !== undefined) {
+        $('#noMessageHeader').remove();
+        $('div.message_holder').append(
+          '<div><b style="color: #000">' + data.username +
+          '</b> ' + data.message + '</div>'
+        );
+      }
+    }
+
+    socket.on('connect', function() {
+      let uid = Math.random().toString(36);
+      console.log("Generated uid " + uid);
+
+      socket.on('receive_message_' + uid, function(data) {
+        console.log("Received initial message");
+        addMessage(data);
+      });
+
+      socket.emit('initialize', {uid: uid});
+
+      var form = $('form').on('submit', function(e) {
+        e.preventDefault();
+        let username = $('input.username').val();
+        let message = $('input.message').val();
+        socket.emit('send_message', {
+          username: username,
+          message: message
+        });
+        // $('input.message').val('').focus();
+      });
+    });
+
+    socket.on('receive_message', function(data) {
+      console.log("Received message: " + data);
+      addMessage(data);
+    });
+  </script>
+</body>
+</html>

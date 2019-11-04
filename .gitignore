@@ -1,0 +1,10 @@
+## VIM ##
+*.sw[op]
+.ropeproject/
+
+## Python ##
+*.py[cod]
+__pycache__/
+
+## Mac ##
+.DS_Store

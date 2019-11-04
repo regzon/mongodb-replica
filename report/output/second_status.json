@@ -1,0 +1,126 @@
+{
+	"set" : "rs0",
+	"date" : ISODate("2019-11-04T16:31:44.129Z"),
+	"myState" : 2,
+	"term" : NumberLong(2),
+	"syncingTo" : "mongo2:27017",
+	"syncSourceHost" : "mongo2:27017",
+	"syncSourceId" : 2,
+	"heartbeatIntervalMillis" : NumberLong(2000),
+	"majorityVoteCount" : 2,
+	"writeMajorityCount" : 2,
+	"optimes" : {
+		"lastCommittedOpTime" : {
+			"ts" : Timestamp(1572885103, 1),
+			"t" : NumberLong(2)
+		},
+		"lastCommittedWallTime" : ISODate("2019-11-04T16:31:43.635Z"),
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1572885103, 1),
+			"t" : NumberLong(2)
+		},
+		"readConcernMajorityWallTime" : ISODate("2019-11-04T16:31:43.635Z"),
+		"appliedOpTime" : {
+			"ts" : Timestamp(1572885103, 1),
+			"t" : NumberLong(2)
+		},
+		"durableOpTime" : {
+			"ts" : Timestamp(1572885103, 1),
+			"t" : NumberLong(2)
+		},
+		"lastAppliedWallTime" : ISODate("2019-11-04T16:31:43.635Z"),
+		"lastDurableWallTime" : ISODate("2019-11-04T16:31:43.635Z")
+	},
+	"lastStableRecoveryTimestamp" : Timestamp(1572885051, 1),
+	"lastStableCheckpointTimestamp" : Timestamp(1572885051, 1),
+	"members" : [
+		{
+			"_id" : 0,
+			"name" : "mongo0:27017",
+			"ip" : null,
+			"health" : 0,
+			"state" : 8,
+			"stateStr" : "(not reachable/healthy)",
+			"uptime" : 0,
+			"optime" : {
+				"ts" : Timestamp(0, 0),
+				"t" : NumberLong(-1)
+			},
+			"optimeDurable" : {
+				"ts" : Timestamp(0, 0),
+				"t" : NumberLong(-1)
+			},
+			"optimeDate" : ISODate("1970-01-01T00:00:00Z"),
+			"optimeDurableDate" : ISODate("1970-01-01T00:00:00Z"),
+			"lastHeartbeat" : ISODate("2019-11-04T16:31:42.808Z"),
+			"lastHeartbeatRecv" : ISODate("2019-11-04T16:31:22.722Z"),
+			"pingMs" : NumberLong(1),
+			"lastHeartbeatMessage" : "Error connecting to mongo0:27017 :: caused by :: Could not find address for mongo0:27017: SocketException: Host not found (authoritative)",
+			"syncingTo" : "",
+			"syncSourceHost" : "",
+			"syncSourceId" : -1,
+			"infoMessage" : "",
+			"configVersion" : -1
+		},
+		{
+			"_id" : 1,
+			"name" : "mongo1:27017",
+			"ip" : "10.0.21.11",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 1985,
+			"optime" : {
+				"ts" : Timestamp(1572885103, 1),
+				"t" : NumberLong(2)
+			},
+			"optimeDate" : ISODate("2019-11-04T16:31:43Z"),
+			"syncingTo" : "mongo2:27017",
+			"syncSourceHost" : "mongo2:27017",
+			"syncSourceId" : 2,
+			"infoMessage" : "",
+			"configVersion" : 1,
+			"self" : true,
+			"lastHeartbeatMessage" : ""
+		},
+		{
+			"_id" : 2,
+			"name" : "mongo2:27017",
+			"ip" : "10.0.21.2",
+			"health" : 1,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 1983,
+			"optime" : {
+				"ts" : Timestamp(1572885093, 1),
+				"t" : NumberLong(2)
+			},
+			"optimeDurable" : {
+				"ts" : Timestamp(1572885093, 1),
+				"t" : NumberLong(2)
+			},
+			"optimeDate" : ISODate("2019-11-04T16:31:33Z"),
+			"optimeDurableDate" : ISODate("2019-11-04T16:31:33Z"),
+			"lastHeartbeat" : ISODate("2019-11-04T16:31:42.659Z"),
+			"lastHeartbeatRecv" : ISODate("2019-11-04T16:31:42.937Z"),
+			"pingMs" : NumberLong(0),
+			"lastHeartbeatMessage" : "",
+			"syncingTo" : "",
+			"syncSourceHost" : "",
+			"syncSourceId" : -1,
+			"infoMessage" : "",
+			"electionTime" : Timestamp(1572885092, 1),
+			"electionDate" : ISODate("2019-11-04T16:31:32Z"),
+			"configVersion" : 1
+		}
+	],
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1572885103, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1572885103, 1)
+}

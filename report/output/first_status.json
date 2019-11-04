@@ -1,0 +1,145 @@
+{
+	"set" : "rs0",
+	"date" : ISODate("2019-11-04T16:28:37.512Z"),
+	"myState" : 1,
+	"term" : NumberLong(1),
+	"syncingTo" : "",
+	"syncSourceHost" : "",
+	"syncSourceId" : -1,
+	"heartbeatIntervalMillis" : NumberLong(2000),
+	"majorityVoteCount" : 2,
+	"writeMajorityCount" : 2,
+	"optimes" : {
+		"lastCommittedOpTime" : {
+			"ts" : Timestamp(1572884911, 1),
+			"t" : NumberLong(1)
+		},
+		"lastCommittedWallTime" : ISODate("2019-11-04T16:28:31.618Z"),
+		"readConcernMajorityOpTime" : {
+			"ts" : Timestamp(1572884911, 1),
+			"t" : NumberLong(1)
+		},
+		"readConcernMajorityWallTime" : ISODate("2019-11-04T16:28:31.618Z"),
+		"appliedOpTime" : {
+			"ts" : Timestamp(1572884911, 1),
+			"t" : NumberLong(1)
+		},
+		"durableOpTime" : {
+			"ts" : Timestamp(1572884911, 1),
+			"t" : NumberLong(1)
+		},
+		"lastAppliedWallTime" : ISODate("2019-11-04T16:28:31.618Z"),
+		"lastDurableWallTime" : ISODate("2019-11-04T16:28:31.618Z")
+	},
+	"lastStableRecoveryTimestamp" : Timestamp(1572884871, 1),
+	"lastStableCheckpointTimestamp" : Timestamp(1572884871, 1),
+	"electionCandidateMetrics" : {
+		"lastElectionReason" : "electionTimeout",
+		"lastElectionDate" : ISODate("2019-11-04T15:58:50.918Z"),
+		"termAtElection" : NumberLong(1),
+		"lastCommittedOpTimeAtElection" : {
+			"ts" : Timestamp(0, 0),
+			"t" : NumberLong(-1)
+		},
+		"lastSeenOpTimeAtElection" : {
+			"ts" : Timestamp(1572883120, 1),
+			"t" : NumberLong(-1)
+		},
+		"numVotesNeeded" : 2,
+		"priorityAtElection" : 1,
+		"electionTimeoutMillis" : NumberLong(10000),
+		"numCatchUpOps" : NumberLong(27017),
+		"newTermStartDate" : ISODate("2019-11-04T15:58:51.539Z"),
+		"wMajorityWriteAvailabilityDate" : ISODate("2019-11-04T15:58:52.248Z")
+	},
+	"members" : [
+		{
+			"_id" : 0,
+			"name" : "mongo0:27017",
+			"ip" : "10.0.21.8",
+			"health" : 1,
+			"state" : 1,
+			"stateStr" : "PRIMARY",
+			"uptime" : 1800,
+			"optime" : {
+				"ts" : Timestamp(1572884911, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2019-11-04T16:28:31Z"),
+			"syncingTo" : "",
+			"syncSourceHost" : "",
+			"syncSourceId" : -1,
+			"infoMessage" : "",
+			"electionTime" : Timestamp(1572883130, 1),
+			"electionDate" : ISODate("2019-11-04T15:58:50Z"),
+			"configVersion" : 1,
+			"self" : true,
+			"lastHeartbeatMessage" : ""
+		},
+		{
+			"_id" : 1,
+			"name" : "mongo1:27017",
+			"ip" : "10.0.21.11",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 1797,
+			"optime" : {
+				"ts" : Timestamp(1572884911, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDurable" : {
+				"ts" : Timestamp(1572884911, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2019-11-04T16:28:31Z"),
+			"optimeDurableDate" : ISODate("2019-11-04T16:28:31Z"),
+			"lastHeartbeat" : ISODate("2019-11-04T16:28:36.578Z"),
+			"lastHeartbeatRecv" : ISODate("2019-11-04T16:28:35.851Z"),
+			"pingMs" : NumberLong(1),
+			"lastHeartbeatMessage" : "",
+			"syncingTo" : "mongo0:27017",
+			"syncSourceHost" : "mongo0:27017",
+			"syncSourceId" : 0,
+			"infoMessage" : "",
+			"configVersion" : 1
+		},
+		{
+			"_id" : 2,
+			"name" : "mongo2:27017",
+			"ip" : "10.0.21.2",
+			"health" : 1,
+			"state" : 2,
+			"stateStr" : "SECONDARY",
+			"uptime" : 1797,
+			"optime" : {
+				"ts" : Timestamp(1572884911, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDurable" : {
+				"ts" : Timestamp(1572884911, 1),
+				"t" : NumberLong(1)
+			},
+			"optimeDate" : ISODate("2019-11-04T16:28:31Z"),
+			"optimeDurableDate" : ISODate("2019-11-04T16:28:31Z"),
+			"lastHeartbeat" : ISODate("2019-11-04T16:28:36.577Z"),
+			"lastHeartbeatRecv" : ISODate("2019-11-04T16:28:35.851Z"),
+			"pingMs" : NumberLong(0),
+			"lastHeartbeatMessage" : "",
+			"syncingTo" : "mongo0:27017",
+			"syncSourceHost" : "mongo0:27017",
+			"syncSourceId" : 0,
+			"infoMessage" : "",
+			"configVersion" : 1
+		}
+	],
+	"ok" : 1,
+	"$clusterTime" : {
+		"clusterTime" : Timestamp(1572884911, 1),
+		"signature" : {
+			"hash" : BinData(0,"AAAAAAAAAAAAAAAAAAAAAAAAAAA="),
+			"keyId" : NumberLong(0)
+		}
+	},
+	"operationTime" : Timestamp(1572884911, 1)
+}

@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  mongo0:
+    build: mongo
+    image: regzon/mongo:4.2
+    environment:
+      MONGO_PRIMARY_HOST: mongo0
+      MONGO_SECONDARY_HOST1: mongo1
+      MONGO_SECONDARY_HOST2: mongo2
+    command: /usr/bin/mongod --bind_ip_all --replSet rs0
+
+  mongo1:
+    build: mongo
+    image: regzon/mongo:4.2
+    command: /usr/bin/mongod --bind_ip_all --replSet rs0
+
+  mongo2:
+    build: mongo
+    image: regzon/mongo:4.2
+    command: /usr/bin/mongod --bind_ip_all --replSet rs0
+
+  application:
+    build: application
+    image: regzon/chat-application:latest
+    ports:
+      - "80:8000"
+    environment:
+      MONGO_URI: mongodb://mongo0,mongo1,mongo2/?replicaSet=rs0
